@@ -1,7 +1,7 @@
 .box {
     color: #fff;
     font-size:  2rem;
-    width:  320px;
+    width:  400px;
     height: 452px;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
