@@ -1,8 +1,8 @@
 .box {
     color: #fff;
     font-size:  2rem;
-    width:  500px;
-    height: 500px;
+    width:  320px;
+    height: 452px;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
 }
