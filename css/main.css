@@ -2,7 +2,7 @@
     color: #fff;
     font-size:  2rem;
     width:  400px;
-    height: 452px;
+    height: 555px;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
 }
