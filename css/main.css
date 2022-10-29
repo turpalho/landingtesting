@@ -12,6 +12,7 @@
     width: 100%;
     text-align: center;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .item:nth-child(1) {
