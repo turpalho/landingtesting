@@ -10,16 +10,12 @@ body{
     font-size:  2rem;
     width:  390px;
     height: 496px;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
 }
 
 .item {
     height: 100%;
     width: 100%;
     text-align: center;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
 .item:nth-child(1) {
