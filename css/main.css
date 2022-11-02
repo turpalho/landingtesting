@@ -71,8 +71,6 @@ h4 {
     width: 180px;
     height: 60px;
     margin: auto;
-    bottom: 0;
-    margin-bottom: var(--tg-viewport-height, 20px);
 }
 
 .support_btn::after{
@@ -80,6 +78,8 @@ h4 {
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
+    margin-bottom: var(--tg-viewport-height, 20px);
 }
 
 .btn {
