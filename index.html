@@ -39,25 +39,11 @@
 
     <script>
         let tg = Telegram.WebApp; //получаем объект webapp телеграма 
-        tg.ready();
-        let windowBool = tg.isExpanded; //развернуто ли окно на полный экран
-        let supBTN = document.getElementById("support_btn");
-        let slogan = document.getElementById("item-sl");
-
-        
+        tg.ready();   
 
         function setViewportData() {
-            // if (windowBool){
-            // supBTN.style.marginTop = "200px";
-            // slogan.style.color = "red";
-            // }
-            // else {
-            //     supBTN.style.marginTop = "auto";
-            //     slogan.style.color = "blue";
-            // }
-
-            $('.support_btn').marginTop((Telegram.WebApp.isExpanded ? '200px' : '0px'));
-            $('.item-slogan').color((Telegram.WebApp.isExpanded ? 'red' : 'blue'));
+            $('.support_btn').marginTop(tg.isExpanded ? '200px' : '0px');
+            $('.item-slogan').color(tg.isExpanded ? 'red' : 'blue');
         }
 
         Telegram.WebApp.onEvent('viewportChanged', setViewportData);
