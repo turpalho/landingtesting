@@ -24,7 +24,7 @@
                 </nav>
             </div>
             <div class="animation">
-                <center><lottie-player src="https://assets6.lottiefiles.com/packages/lf20_ZBDdP3/data.json"  background="transparent"  speed="1"  style="margin-bottom: 45px; margin-top: 30px; width: 274px; height: 176px;"  loop autoplay></lottie-player></center>
+                <center><lottie-player src="https://assets6.lottiefiles.com/packages/lf20_ZBDdP3/data.json"  background="transparent"  speed="1"  style="margin-bottom: 9%; margin-top: 6%; width: 69%; height: 35%;"  loop autoplay></lottie-player></center>
             </div>
             <div class="item-slogan">
                 <h4>Зарабатывай много. <br>Обучайся у лучших.</h4>
@@ -38,5 +38,17 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://webappcontent.telegram.org/js/jquery.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script>
+        let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
+
+        let windowBool = Telegram.WebApp.isExpanded; //развернуто ли окно на полный экран
+        const supBTN = document.getElementsByClassName("support_btn");
+
+        if (windowBool){
+            supBTN.style.marginTop = "200px";
+        }
+
+    </script>
 </body>
 </html>
