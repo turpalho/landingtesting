@@ -44,11 +44,14 @@
 
         let windowBool = Telegram.WebApp.isExpanded; //развернуто ли окно на полный экран
         const supBTN = document.getElementsByClassName("support_btn");
-
-        if (windowBool){
-            supBTN.style.marginTop = "200px";
+        function setViewportData() {
+            if (windowBool){
+                supBTN.style.marginTop = "200px";
+            }
         }
 
+        Telegram.WebApp.onEvent('viewportChanged', setViewportData);
+        setViewportData();
     </script>
 </body>
 </html>
