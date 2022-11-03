@@ -54,8 +54,16 @@
             $('.viewport_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportHeight, 2));
             $('.viewport_stable_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportStableHeight, 2) + ' | is_expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false'));
 
-            supBTN.marginTop = Telegram.WebApp.isExpanded ? '200px' : '0px';
-            slogan.color = Telegram.WebApp.isExpanded ? 'red' : 'blue';
+            if(Telegram.WebApp.viewportStableHeight >= 760){
+                document.getElementById("support_btn").marginTop = '200px';
+                slogan.color = 'red';
+            }
+            else {
+                document.getElementById("support_btn").marginTop = '0px';
+                slogan.color = 'blue';
+            }
+            // document.getElementById("support_btn").marginTop = Telegram.WebApp.isExpanded ? '200px' : '0px';
+            
         }
 
         Telegram.WebApp.onEvent('viewportChanged', setViewportData);
