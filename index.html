@@ -38,19 +38,28 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <script>
-        let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
-
+        let tg = Telegram.WebApp; //получаем объект webapp телеграма 
+        tg.ready();
         let windowBool = tg.isExpanded; //развернуто ли окно на полный экран
         let supBTN = document.getElementById("support_btn");
         let slogan = document.getElementById("item-sl");
-        if (windowBool){
+
+        
+
+        function setViewportData() {
+            if (windowBool){
             supBTN.style.marginTop = "200px";
             slogan.style.color = "red";
+            }
+            else {
+                supBTN.style.marginTop = "auto";
+                slogan.style.color = "blue";
+            }
         }
-        else {
-            supBTN.style.marginTop = "auto";
-            slogan.style.color = "blue";
-        }
+
+        Telegram.WebApp.onEvent('viewportChanged', setViewportData);
+        setViewportData();
+
     </script>
 </body>
 </html>
