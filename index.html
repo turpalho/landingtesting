@@ -26,7 +26,7 @@
             <div class="animation">
                 <center><lottie-player src="https://assets6.lottiefiles.com/packages/lf20_ZBDdP3/data.json"  background="transparent"  speed="1"  style="margin-bottom: 45px; margin-top: 30px; width: 274px; height: 176px;"  loop autoplay></lottie-player></center>
             </div>
-            <div class="item-slogan">
+            <div id="item-sl" class="item-slogan">
                 <h4>Зарабатывай много. <br>Обучайся у лучших.</h4>
             </div>        
             <div id="support_btn" class="support_btn">
@@ -42,11 +42,14 @@
 
         let windowBool = tg.isExpanded; //развернуто ли окно на полный экран
         let supBTN = document.getElementById("support_btn");
+        let slogan = document.getElementById("item-sl");
         if (windowBool){
             supBTN.style.marginTop = "200px";
+            slogan.style.color = "red";
         }
         else {
-            supBTN.style.marginTop = "0px";
+            supBTN.style.marginTop = "auto";
+            slogan.style.color = "blue";
         }
     </script>
 </body>
