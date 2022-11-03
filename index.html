@@ -46,8 +46,8 @@
         
 
         function setViewportData() {
-            supBTN.marginTop(tg.isExpanded ? '200px' : '0px');
-            slogan.color(tg.isExpanded ? 'red' : 'blue');
+            supBTN.marginTop = tg.isExpanded ? '200px' : '0px';
+            slogan.color = tg.isExpanded ? 'red' : 'blue';
         }
 
         Telegram.WebApp.onEvent('viewportChanged', setViewportData);
