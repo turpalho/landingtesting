@@ -50,7 +50,7 @@
             slogan.color = tg.isExpanded ? 'red' : 'blue';
         }
 
-        Telegram.WebApp.onEvent('viewportChanged', setViewportData);
+        tg.onEvent('viewportChanged', setViewportData);
         setViewportData();
 
     </script>
