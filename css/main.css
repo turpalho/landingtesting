@@ -7,32 +7,29 @@ body{
     background-image: url('../img/light.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 110vh;
     
   }
   
 .box {
     color: #fff;
     display: block;
-    /* height: var(--tg-viewport-stable-height, 70vh); */
+    /* height: var(--tg-viewport-stable-height, 80vh); */
     text-align: center;
-    height: 100vh;
+    margin: auto;
 }
 
 .item {
-    height: 90%;
+    height: 100%;
     width: 100%;
-}
-
-.item-text {
-    margin-top: 9%;
+    margin: auto;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     letter-spacing: 3px;
-    margin-bottom: 0;
+    margin: auto;
 }
 
 .navBox {
