@@ -40,8 +40,8 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <script>
-        let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
-
+        let tg = Telegram.WebApp; //получаем объект webapp телеграма
+        tg.ready()
         let windowBool = tg.isExpanded; //развернуто ли окно на полный экран
         let supBTN = document.getElementById("support_btn");
         if (windowBool){
