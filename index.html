@@ -47,14 +47,17 @@
         
 
         function setViewportData() {
-            if (windowBool){
-            supBTN.style.marginTop = "200px";
-            slogan.style.color = "red";
-            }
-            else {
-                supBTN.style.marginTop = "auto";
-                slogan.style.color = "blue";
-            }
+            // if (windowBool){
+            // supBTN.style.marginTop = "200px";
+            // slogan.style.color = "red";
+            // }
+            // else {
+            //     supBTN.style.marginTop = "auto";
+            //     slogan.style.color = "blue";
+            // }
+
+            $('.support_btn').marginTop((Telegram.WebApp.isExpanded ? '200px' : '0px'));
+            $('.item-slogan').color((Telegram.WebApp.isExpanded ? 'red' : 'blue'));
         }
 
         Telegram.WebApp.onEvent('viewportChanged', setViewportData);
