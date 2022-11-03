@@ -29,7 +29,7 @@
             <div class="item-slogan">
                 <h4>Зарабатывай много. <br>Обучайся у лучших.</h4>
             </div>        
-            <div class="support_btn">
+            <div id="support_btn" class="support_btn">
                 <a class="btn" href="https://t.me/cryptohalal_ru_bot">НАПИСАТЬ</a>
             </div>
         </div>
@@ -42,16 +42,11 @@
     <script>
         let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
 
-        let windowBool = Telegram.WebApp.isExpanded; //развернуто ли окно на полный экран
-        const supBTN = document.getElementsByClassName("support_btn");
-        function setViewportData() {
-            if (windowBool){
-                supBTN.style.marginTop = "200px";
-            }
+        let windowBool = tg.isExpanded; //развернуто ли окно на полный экран
+        let supBTN = document.getElementById("support_btn");
+        if (windowBool){
+            supBTN.style.marginTop = "200px";
         }
-
-        Telegram.WebApp.onEvent('viewportChanged', setViewportData);
-        setViewportData();
     </script>
 </body>
 </html>
