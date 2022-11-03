@@ -38,19 +38,18 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <script>
-        let tg = Telegram.WebApp; //получаем объект webapp телеграма 
-        tg.ready();
+        Telegram.WebApp.ready();
         let supBTN = document.getElementById("support_btn");
         let slogan = document.getElementById("item-sl");
 
         
 
         function setViewportData() {
-            supBTN.marginTop = tg.isExpanded ? '200px' : '0px';
-            slogan.color = tg.isExpanded ? 'red' : 'blue';
+            supBTN.marginTop = Telegram.WebApp.isExpanded ? '200px' : '0px';
+            slogan.color = Telegram.WebApp.isExpanded ? 'red' : 'blue';
         }
 
-        tg.onEvent('viewportChanged', setViewportData);
+        Telegram.WebApp.onEvent('viewportChanged', setViewportData);
         setViewportData();
 
     </script>
