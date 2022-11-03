@@ -39,11 +39,15 @@
 
     <script>
         let tg = Telegram.WebApp; //получаем объект webapp телеграма 
-        tg.ready();   
+        tg.ready();
+        let supBTN = document.getElementById("support_btn");
+        let slogan = document.getElementById("item-sl");
+
+        
 
         function setViewportData() {
-            $('.support_btn').marginTop(tg.isExpanded ? '200px' : '0px');
-            $('.item-slogan').color(tg.isExpanded ? 'red' : 'blue');
+            supBTN.marginTop((tg.isExpanded ? '200px' : '0px'));
+            slogan.color((tg.isExpanded ? 'red' : 'blue'));
         }
 
         Telegram.WebApp.onEvent('viewportChanged', setViewportData);
