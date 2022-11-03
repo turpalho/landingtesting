@@ -53,15 +53,15 @@
         function setViewportData() {
             $('.viewport_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportHeight, 2));
             $('.viewport_stable_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportStableHeight, 2) + ' | is_expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false'));
-
-            if(Telegram.WebApp.viewportStableHeight >= 760){
-                document.getElementById("support_btn").marginTop = '200px';
-                slogan.color = 'red';
-            }
-            else {
-                document.getElementById("support_btn").marginTop = '0px';
-                slogan.color = 'blue';
-            }
+            $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 200px;' : 'margin-top: 0px;'));
+            // if(Telegram.WebApp.viewportStableHeight >= 760){
+            //     document.getElementById("support_btn").marginTop = '200px';
+            //     slogan.color = 'red';
+            // }
+            // else {
+            //     document.getElementById("support_btn").marginTop = '0px';
+            //     slogan.color = 'blue';
+            // }
             // document.getElementById("support_btn").marginTop = Telegram.WebApp.isExpanded ? '200px' : '0px';
             
         }
