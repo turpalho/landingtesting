@@ -33,8 +33,8 @@
                 <a class="btn" href="https://t.me/cryptohalal_ru_bot">НАПИСАТЬ</a>
             </div>
         </div>
-        <div class="viewport_border"></div>
-        <div class="viewport_stable_border"></div>
+<!--         <div class="viewport_border"></div>
+        <div class="viewport_stable_border"></div> -->
     </div>
     
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -53,8 +53,8 @@
         const screenHeight = window.screen.height
 
         function setViewportData() {
-            $('.viewport_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportHeight, 2));
-            $('.viewport_stable_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportStableHeight, 2) + ' | is_expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false'));
+//             $('.viewport_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportHeight, 2));
+//             $('.viewport_stable_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportStableHeight, 2) + ' | is_expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false'));
             $('.body').attr('style', '' + (Telegram.WebApp.isExpanded ? "background-image: url(img/lightFull.png); background-size: 100% 120vh;" : "background-image: url(img/light.png);"));
             $('.box').attr('style', '' + (Telegram.WebApp.isExpanded ? 'padding-top: 50px;' : 'padding-top: 0;'));
             $('.animation').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 100px; margin-bottom: 50px;' : 'margin-top: 0px;'));
